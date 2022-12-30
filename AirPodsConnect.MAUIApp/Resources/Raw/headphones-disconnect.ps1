@@ -1,8 +1,8 @@
-$headphonesName = "AirPods Pro Avrcp Transport"
+$headphonesName = "Avrcp Transport"
 
 $bluetoothDevices = Get-PnpDevice -class Bluetooth
 
-$headphonePnpDevices = $bluetoothDevices | Where-Object { $_.Name.StartsWith("$headphonesName") }
+$headphonePnpDevices = $bluetoothDevices | Where-Object { $_.Name.EndsWith("$headphonesName") }
 
 if(!$headphonePnpDevices) {
     Write-Host "Coudn't find any devices related to the '$headphonesName'"
