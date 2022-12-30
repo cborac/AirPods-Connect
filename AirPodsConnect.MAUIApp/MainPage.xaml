@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirPodsConnect.Interface.MainPage"
+             Title=""
+             Shell.NavBarIsVisible="False">
+
+
+    <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+        <WebView x:Name="webView"
+                     VerticalOptions="FillAndExpand"
+                     HeightRequest="187"
+                     WidthRequest="250"/>
+        <HorizontalStackLayout
+                HorizontalOptions="Center">
+            <Ellipse Fill="#ff1d3a"
+                     WidthRequest="10"
+                     HeightRequest="10"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     Margin="0, 0, 5, 0"
+                     x:Name="Circle"/>
+            <Label
+                    Text="Disconnected"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="16"
+                    VerticalOptions="Center"
+                    x:Name="Title"/>
+        </HorizontalStackLayout>
+        <Button Text="Connect"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                HeightRequest="30"
+                Padding="0"
+                BorderWidth="1"
+                Clicked="OnButtonClicked"
+                x:Name="Button"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
